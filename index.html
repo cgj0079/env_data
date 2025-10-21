@@ -10,6 +10,11 @@
   <header>
     <h1>청운지 주변 환경 데이터</h1>
     <p>현재 측정된 데이터 평균 값</p>
+    <div class="controls">
+      <span id="last-updated">마지막 업데이트: --</span>
+      <!-- <label><input type="checkbox" id="unitToggle"> ℉로 보기</label>
+      <label><input type="checkbox" id="darkModeToggle"> 다크 모드</label> -->
+    </div>
   </header>
 
   <main class="card-container">
@@ -39,10 +44,22 @@
     </div>
   </main>
 
+  <section class="charts">
+    <div class="chart-card">
+      <h3>온도 추이</h3>
+      <canvas id="tempChart" height="120"></canvas>
+    </div>
+    <div class="chart-card">
+      <h3>초미세먼지 추이</h3>
+      <canvas id="pmChart" height="120"></canvas>
+    </div>
+  </section>
+
   <footer>
     <p>&copy;청운지 환경 모니터링 시스템</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
