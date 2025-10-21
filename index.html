@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>청운지 주변 환경 모니터링</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>청운지 주변 환경 데이터</h1>
+    <p>현재 측정된 데이터 평균 값</p>
+  </header>
+
+  <main class="card-container">
+    <div class="card">
+      <h2>온도</h2>
+      <p class="value" id="temperature">--℃</p>
+    </div>
+    <div class="card">
+      <h2>습도</h2>
+      <p class="value" id="humidity">--%</p>
+    </div>
+    <div class="card">
+      <h2>기압</h2>
+      <p class="value" id="pressure">---- hPa</p>
+    </div>
+    <div class="card">
+      <h2>초미세먼지</h2>
+      <p class="value" id="pm25">-- µg/m³</p>
+    </div>
+    <div class="card">
+      <h2>미세먼지</h2>
+      <p class="value" id="pm10">-- µg/m³</p>
+    </div>
+    <div class="card">
+      <h2>수온</h2>
+      <p class="value" id="temperature_water">--℃</p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy;청운지 환경 모니터링 시스템</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
