@@ -66,6 +66,7 @@ header p {
   color: #2c3e50;
 }
 
+/* 푸터 */
 footer {
   text-align: center;
   margin-top: 40px;
@@ -73,6 +74,7 @@ footer {
   color: #888;
 }
 
+/* 추가 스타일: 컨트롤, 알림, 다크모드, 차트 */
 .controls { display:flex; gap:10px; align-items:center; margin-top:8px; justify-content:center; }
 .controls button, .controls label { font-size:0.9rem; }
 
@@ -85,4 +87,15 @@ footer {
 .charts { display:flex; gap:16px; padding:16px; max-width:1200px; margin:0 auto; }
 .chart-card { flex:1; background:transparent; padding:8px; }
 
+.pm-status { margin-top:8px; font-weight:600; }
+.aqi-summary { margin-top:6px; font-weight:600; }
+
 @media (max-width:700px){ .charts{ flex-direction:column; } .controls{ flex-direction:column; align-items:flex-start; } }
+
+.day-table { max-width:1200px; margin: 16px auto; padding: 0 16px; }
+.table-wrap { overflow:auto; background: #fff; border-radius:8px; padding:8px; }
+table#dayTable { width:100%; border-collapse: collapse; }
+table#dayTable th, table#dayTable td { padding:8px 10px; border-bottom:1px solid #eee; text-align:center; font-size:0.9rem; }
+table#dayTable thead th { background:#fafafa; position: sticky; top:0; }
+.dark table#dayTable thead th { background: #0f1725; }
+@media (max-width:600px){ table#dayTable th:nth-child(3), table#dayTable td:nth-child(3), table#dayTable th:nth-child(4), table#dayTable td:nth-child(4){ display:none; } }
