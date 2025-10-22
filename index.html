@@ -12,8 +12,6 @@
     <p>현재 측정된 데이터 평균 값</p>
     <div class="controls">
       <span id="last-updated">마지막 업데이트: --</span>
-      <!-- <label><input type="checkbox" id="unitToggle"> ℉로 보기</label>
-      <label><input type="checkbox" id="darkModeToggle"> 다크 모드</label> -->
     </div>
   </header>
 
@@ -50,16 +48,19 @@
       <canvas id="tempChart" height="120"></canvas>
     </div>
     <div class="chart-card">
-      <h3>초미세먼지 추이</h3>
+      <h3>미세먼지 추이</h3>
       <canvas id="pmChart" height="120"></canvas>
+      <div id="pmStatus" class="pm-status">상태: --</div>
+      <div id="aqiSummary" class="aqi-summary">AQI: -- (카테고리: --)</div>
     </div>
   </section>
 
   <footer>
-    <p>&copy;청운지 환경 모니터링 시스템</p>
+    <p>&copy; 청운지 환경 모니터링 시스템</p>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns/dist/chartjs-adapter-date-fns.bundle.min.js"></script> 
+<script src="script.js"></script>
 </body>
 </html>
