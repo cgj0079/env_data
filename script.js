@@ -365,13 +365,13 @@ function aqiCategoryLabel(aqi){
 function updatePMStatusAndAQI(avgPm25, avgPm10){
   const statusEl = document.getElementById('pmStatus');
   const aqiEl = document.getElementById('aqiSummary');
-  if (statusEl){ const cat = pm25Category(avgPm25); statusEl.textContent = `상태: ${cat.label}`; statusEl.style.color = cat.color; }
+  if (statusEl){ const cat = pm25Category(avgPm25); statusEl.textContent = `대기질: ${cat.label}`; statusEl.style.color = cat.color; }
   const aqi25 = concToAQI(avgPm25, 'pm25');
   const aqi10 = concToAQI(avgPm10, 'pm10');
   const overall = [aqi25, aqi10].filter(x=>x!==null);
   const overallAQI = overall.length? Math.max(...overall) : null;
   const catLabel = aqiCategoryLabel(overallAQI);
-  if (aqiEl) aqiEl.textContent = overallAQI? `AQI: ${overallAQI} (카테고리: ${catLabel})` : 'AQI: -- (카테고리: --)';
+  if (aqiEl) aqiEl.textContent = overallAQI? `AQI(대기환경지수): ${overallAQI} (분류: ${catLabel})` : 'AQI(대기환경지수): -- (분류: --)';
   // 차트 색 업데이트: PM2.5 색 by pm25Category, PM10 use fixed color or scaled
   if (pmChart && pmChart.data && pmChart.data.datasets){
     if (avgPm25!==null){ pmChart.data.datasets[0].borderColor = pm25Category(avgPm25).color; }
@@ -390,3 +390,4 @@ document.addEventListener('DOMContentLoaded', ()=>{
   fetchSensorData();
   setInterval(fetchSensorData, 1000*60);
 });
+
